@@ -11,7 +11,7 @@ class FlaskTestCase(unittest.TestCase):
     def test_login_page_loads(self):
         tester = app.test_client(self)
         response = tester.get('/signIn', content_type='html/css')
-        self.assertTrue("Login" in response.data)
+        self.assertTrue(b"Login" in response.data)
     #correct creditials behavious
 
     #Incorrect credetials
